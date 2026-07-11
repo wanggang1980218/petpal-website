@@ -1,8 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&display=swap');
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "./tailwind-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(30 60% 97%);
+  --foreground: hsl(0 0% 20%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 20%);
+  --primary: hsl(24 100% 63%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(30 80% 92%);
+  --secondary-foreground: hsl(24 60% 35%);
+  --muted: hsl(30 40% 94%);
+  --muted-foreground: hsl(25 5% 45%);
+  --accent: hsl(30 80% 92%);
+  --accent-foreground: hsl(24 60% 35%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(30 30% 88%);
+  --input: hsl(30 30% 88%);
+  --ring: hsl(24 100% 63%);
+  --success: hsl(130 54% 42%);
+  --radius: 0.75rem;
+}
 
 body {
   font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
 }
