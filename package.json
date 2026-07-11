@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "homepage": "https://wanggang1980218.github.io/petpal-website/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
