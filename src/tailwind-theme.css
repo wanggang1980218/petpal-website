@@ -1,0 +1,46 @@
+:root {
+  --background: hsl(30 60% 97%);
+  --foreground: hsl(0 0% 20%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 20%);
+  --primary: hsl(24 100% 63%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(30 80% 92%);
+  --secondary-foreground: hsl(24 60% 35%);
+  --muted: hsl(30 40% 94%);
+  --muted-foreground: hsl(25 5% 45%);
+  --accent: hsl(30 80% 92%);
+  --accent-foreground: hsl(24 60% 35%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(30 30% 88%);
+  --input: hsl(30 30% 88%);
+  --ring: hsl(24 100% 63%);
+  --success: hsl(130 54% 42%);
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
