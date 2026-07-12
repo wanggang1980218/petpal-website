@@ -1,33 +1,6 @@
 import { motion } from 'framer-motion';
 import { MOCK_CASES, type ICase } from '@/data/cases';
-import { Cat, Dog, Rabbit, Zap } from 'lucide-react';
-
-// Hamster icon not in lucide, use custom SVG
-const HamsterIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <circle cx="12" cy="12" r="9" />
-    <circle cx="9" cy="10" r="1.5" fill="currentColor" />
-    <circle cx="15" cy="10" r="1.5" fill="currentColor" />
-    <path d="M8 14c1.5 2 4.5 2 6 0" />
-    <path d="M6 8c-1-1-2 0-1.5 1.5" />
-    <path d="M18 8c1-1 2 0 1.5 1.5" />
-  </svg>
-);
-
-const ICON_MAP = {
-  Cat,
-  Dog,
-  Hamster: HamsterIcon,
-  Rabbit,
-} as const;
+import { Zap } from 'lucide-react';
 
 export default function CasesSection() {
   return (
@@ -42,20 +15,18 @@ export default function CasesSection() {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            案例展示
+            妗堜緥灞曠ず
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            看看他们的桌面伙伴
-          </h2>
+            鐪嬬湅浠栦滑鐨勬闈紮浼?          </h2>
           <p className="text-muted-foreground text-lg">
-            猫咪、狗狗、异宠都能做，每一只都是独一无二的小可爱
+            鐚挭銆佺嫍鐙椼€佸紓瀹犻兘鑳藉仛锛屾瘡涓€鍙兘鏄嫭涓€鏃犱簩鐨勫皬鍙埍
           </p>
         </motion.div>
 
         {/* Case cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {MOCK_CASES.map((item: ICase, i: number) => {
-            const Icon = ICON_MAP[item.iconName];
             return (
               <motion.div
                 key={item.id}
@@ -80,10 +51,11 @@ export default function CasesSection() {
                     }}
                   />
 
-                  {/* Icon */}
-                  <Icon
-                    className="size-24 text-primary/60 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500"
-                    strokeWidth={1.5}
+                  {/* Pet Image */}
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="relative z-10 w-4/5 h-4/5 object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-lg"
                   />
 
                   {/* Pixel corner decorations */}
@@ -104,8 +76,7 @@ export default function CasesSection() {
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Zap className="size-4 text-primary" />
                     <span>
-                      <span className="font-semibold text-foreground">{item.actionCount}</span> 个动作
-                    </span>
+                      <span className="font-semibold text-foreground">{item.actionCount}</span> 涓姩浣?                    </span>
                   </div>
                 </div>
               </motion.div>
