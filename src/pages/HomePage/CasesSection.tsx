@@ -15,12 +15,13 @@ export default function CasesSection() {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            妗堜緥灞曠ず
+            案例展示
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            鐪嬬湅浠栦滑鐨勬闈紮浼?          </h2>
+            看看他们的像素桌宠
+          </h2>
           <p className="text-muted-foreground text-lg">
-            鐚挭銆佺嫍鐙椼€佸紓瀹犻兘鑳藉仛锛屾瘡涓€鍙兘鏄嫭涓€鏃犱簩鐨勫皬鍙埍
+            猫咪、狗狗、兔兔都能做，每一只都是独一无二的小可爱
           </p>
         </motion.div>
 
@@ -76,7 +77,8 @@ export default function CasesSection() {
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Zap className="size-4 text-primary" />
                     <span>
-                      <span className="font-semibold text-foreground">{item.actionCount}</span> 涓姩浣?                    </span>
+                      <span className="font-semibold text-foreground">{item.actionCount}</span> 个动作
+                    </span>
                   </div>
                 </div>
               </motion.div>
